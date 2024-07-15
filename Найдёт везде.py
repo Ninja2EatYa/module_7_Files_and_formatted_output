@@ -17,10 +17,7 @@ class WordsFinder:
         word = word.lower()
         result = {}
         for name, words in self.get_all_words().items():
-            if word in words:
-                result[name] = words.index(word) + 1
-            else:
-                result[name] = None
+            result[name] = words.index(word) + 1
         return result
 
     def count(self, word):
